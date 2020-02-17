@@ -2,9 +2,75 @@ body {
     width: 100vw;
     overflow-x: hidden;
     height: 100vh;
+    margin:0;
+    font-family: "Montserrat";
+}
+p{
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+.text-center{
+    text-align:center;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-lighter{
+    font-weight: lighter;
 }
 
 .block_main{
-    background-image: url("/assets/home_background.png");
     height: 100vh;
+    
 }
+
+/*########
+###HOME###
+########*/
+
+.title{
+    font-size: 28pt;
+}
+
+.subtitle{
+    font-size: 26pt;
+}
+.block_main.index{
+    background-image: url("/assets/home_background.png");
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color:white;
+}
+
+.landing{
+    margin-top: 25vh;
+}
+
+.button{
+    border-radius: 50px;
+    color:white;
+    padding: 15px 150px;
+    text-align:center;
+    font-weight: bold;
+    margin:0;
+}
+
+.landing-button{
+    margin-top: 25vh;
+}
+
+.button.green{
+    background-color: #417623!important;
+    margin:0;
+}
+
+/*########
+###HOME###
+########*/
