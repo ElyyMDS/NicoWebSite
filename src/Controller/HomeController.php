@@ -21,13 +21,13 @@ class HomeController extends AbstractController{
     }
 
     /**
-     * @Route("/actu",name="home_actu",methods={"GET"})
+     * @Route("/accueil",name="home_actu",methods={"GET"})
      * 
      * @param Request $request
      * @return Response
      */
     public function actu(Request $request,EntityManagerInterface $entityManager): Response
     {
-        return $this->render('Home/index.html.twig');
+        return $this->render('Home/accueil.html.twig');
     }
 }

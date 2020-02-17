@@ -77,7 +77,7 @@ class SecurityController extends AbstractController
             $this->addFlash("danger","Verifier votre formulaire");
         }
 
-        return $this->render('User/inscription.html.twig',[
+        return $this->render('Admin/inscription.html.twig',[
             'formUser'=>$formUser->createView()
         ]);
     }
