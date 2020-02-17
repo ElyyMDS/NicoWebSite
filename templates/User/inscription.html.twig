@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+        <main class="block_main">
+            <h2 class="mb-5">INSCRIPTION</h2>
+
+            <div class="container w-50">
+                {{ form_start(formUser) }}
+                    {{form_row(formUser.plainPassword)}}
+                {{ form_end(formUser) }}
+
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+
+            </div>
+            
+
+            {% for label,messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{label}} w-50" role="alert">
+                        {{message}}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            <a href="/login" class="mt-5" style="text-decoration:none;">Déja inscrit ?</a>
+        </main>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+
