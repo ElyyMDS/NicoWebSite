@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+        <main class="block_main accueil">
+            {# Ne pas toucher la div mg #}
+            <div id="mg">
+            </div>
+
+            <div class="details">
+                <div class="block_bienvenue">
+                    <div class="landing_element">
+                        <span>Nicolas M.</span>
+                        <p>Bienvenue sur <br>ma page</p>
+                    </div>
+                    <a href="" class="mes_voyages">Mes voyages<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="container">
+                    <div class="left">
+                        <p>Picture by Nicolas M.</p>
+                        <p style="font-family: 'Montserrat ExtraLight'">Chiemsee, Germany</p>
+                    </div>
+                    <div class="right">
+                        <p>29</p>
+                        <p><i class="far fa-comment-alt" style="padding-right: 10px"></i></p>
+                        <p>256</p>
+                        <p><i class="far fa-heart"></i></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    let headerHeight = header.offsetHeight;
+    let detailHeight = window.innerHeight - headerHeight - 20;
+    let details = document.getElementsByClassName('container')[0];
+    details.setAttribute('style',`height: ${detailHeight}px`);
+</script>
+{% endblock %}
+
+

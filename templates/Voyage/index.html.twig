@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+        <main class="block_main voyage">
+            <div id="mg">
+            </div>
+
+            <div class="new_article">
+                <div class="new_article_prewrapper">
+                    <div class="wrapper">
+                        <a href="/new-article" class="link_container">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>Ajouter un article</p>
+                        </a>
+                        <div class="stat_div">
+                            <div class="stat_element">
+                                <p>125<p>
+                                <p>J'AIMES</p>
+                            </div>
+                            <div class="stat_element">
+                                <p>12<p>
+                                <p>COMMENTAIRES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="block_voyage">
+                <div class="last_post style-4">
+
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="block_post style-4">
+                    <div class="container">
+                        <div class="post_header">
+                            <p>20 MAI | 28 MAI</p>
+                            <h2 class="title">Voyage aux maldives</h2>
+                        </div>
+                        <p class="paragraphe">
+                        Je pensais à cette destination paradisiaque : 
+plages, cocotiers, snorkeling...le fait de se 
+retrouver coincée sur une île-hôtel me 
+contrariait, car j 'adore les marchés, les villages, les enfants (non, je ne leur donne pas de bonbons, mais ils ne sont pas toujours 
+à l'école !)
+
+                        </p>
+                        <p class="paragraphe">
+                        
+Une amie m'a alors conseillé de me renseigner, de voir le film de "Envoyé Spécial", et j'ai compris qu'il y a des destinations plus sympathiques que cette république islamique tellement hypocrite qu'elle laisse le personnel local voir les touristes friquées en maillot de bain mais interdit tout à ses habitantes, et a rétabli la peine de mort, même pour les gosses…
+                        </p>
+                    </div>
+                    <a href="assets/bg_profile.jpg"/>
+                        <img src="assets/bg_profile.jpg" class="post_img"/>
+                    </a>
+
+                    <div class="container">
+                     <p class="paragraphe">
+                        Je pensais à cette destination paradisiaque : 
+plages, cocotiers, snorkeling...le fait de se 
+retrouver coincée sur une île-hôtel me 
+contrariait, car j 'adore les marchés, les villages, les enfants (non, je ne leur donne pas de bonbons, mais ils ne sont pas toujours 
+à l'école !)
+
+                        </p>
+                        <p class="paragraphe">
+                        
+Une amie m'a alors conseillé de me renseigner, de voir le film de "Envoyé Spécial", et j'ai compris qu'il y a des destinations plus sympathiques que cette république islamique tellement hypocrite qu'elle laisse le personnel local voir les touristes friquées en maillot de bain mais interdit tout à ses habitantes, et a rétabli la peine de mort, même pour les gosses…
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    let headerContent = document.getElementsByClassName('user_info');
+    header ? header.classList.remove('purple-shadow') : false;
+    headerContent[0].innerHTML = "<h2>Mes Voyages</h2><p class='text-lighter'>Découvrez mon parcours</p>";
+    mg ? mg.setAttribute('style',`height: ${header.offsetHeight}px`): false;
+    let headerBg = document.getElementsByClassName('header_precontainer')[0];
+    let newArticleDiv = document.getElementsByClassName('new_article')[0];
+    header.setAttribute('style','background-color: #4666E5');
+    let voyage = document.getElementsByClassName('block_voyage')[0];
+    voyage ? voyage.setAttribute('style',`height: ${window.innerHeight - header.offsetHeight - newArticleDiv.offsetHeight}px`): false;
+</script>
+{% endblock %}
+
+

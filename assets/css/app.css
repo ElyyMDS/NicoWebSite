@@ -1,10 +1,388 @@
 body {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     height: 100vh;
+    margin:0;
+    font-family: "Montserrat";
+}
+.style-4::-webkit-scrollbar-track
+{
+	background-color: #241332;
+}
+
+.style-4::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #241332;
+}
+
+.style-4::-webkit-scrollbar-thumb
+{
+	background-color: #bbbbbb;
+}
+
+ul{
+    margin:0;
+}
+p{
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    margin:0;
+}
+.text-center{
+    text-align:center;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.text-lighter{
+    font-weight: lighter;
 }
 
 .block_main{
-    background-image: url("/assets/home_background.png");
     height: 100vh;
+}
+#mg{
+    transition: all .3s;
+}
+
+#mg {
+    transition: all .3s;
+}
+
+/*########
+###HOME###
+########*/
+
+.title{
+    font-size: 28pt;
+}
+
+.subtitle{
+    font-size: 26pt;
+}
+.block_main.index{
+    background-image: url("/assets/home_background.png");
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color:white;
+}
+
+.landing{
+    margin-top: 25vh;
+    z-index: 2;
+}
+
+.button{
+    border-radius: 50px;
+    color:white;
+    padding: 15px 150px;
+    text-align:center;
+    font-weight: bold;
+    margin:0;
+    -webkit-box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
+}
+
+.landing-button{
+    margin-top: 25vh;
+    z-index: 1;
+}
+
+.button.green{
+    background-color: #417623!important;
+    margin:0;
+}
+
+.bg-grey{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.294);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+
+/*########
+###HOME###
+########*/
+
+/*########
+#accueil##
+########*/
+
+.block_main.accueil{
+    background-image: url("/assets/bg_profile.jpg");
+}
+.purple-shadow{
+    -webkit-box-shadow: 10px 10px 35px 64px rgba(61,30,80,1);
+    -moz-box-shadow: 10px 10px 35px 64px rgba(61,30,80,1);
+    box-shadow: 10px 10px 35px 64px rgba(61,30,80,1);
+    position: fixed;
+    width: 100%;
+}
+.block_header{
+    position: fixed;
+    width:100%;
+}
+.block_header .header_precontainer{
+    background-color: white;
+    border-bottom-left-radius: 75px;
+}
+
+.block_header .header_container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding:25px 25px;
+    text-align: center;
+}
+
+.profile_picture{
+    width: 100px;
+}
+
+.profile,.disconnect{
+    margin-right: 50px;
+}
+
+.profile_name{
+    margin-top: 20px;
+}
+.location{
+    color: rgb(170, 170, 170);
+}
+.block_nav{
+    width: 65%;
+    margin: 0 auto;
+}
+.block_nav .nav_menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    padding-bottom: 25px;
+    align-items: center;
+
+}
+.block_nav .nav_menu .nav_item{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color: #3D1E50;
+}
+
+.block_nav .nav_menu .nav_item.active {
+    border-radius: 50px;
+    background-color: #3D1E50;
+    color: white;
+    padding: 10px 15px;
+}
+.block_nav .nav_menu .nav_item .nav_icon{
+    margin-right: 10px;
+}
+
+.block_bienvenue {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    color: white;
+}
+.mes_voyages {
+    color: white;
+    text-align: right;
+    position: absolute;
+    top:80%;
+    right: 0;
+    background-color: #9B2C5C;
+    padding: 15px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+.fa-arrow-right {
+    margin-left: 10px;
+}
+.block_bienvenue p {
+    font-size: 28px;
+    font-family: "Montserrat Black";
+}
+.block_bienvenue span {
+    color: #C2BEC6;
+}
+
+.block_bienvenue .landing_element {
+    background-color: #352641;
+    padding: 2rem 8rem 2rem 3rem;
+    border-bottom-left-radius: 75px;
+    border-top-left-radius: 10px;
+}
+.accueil .details .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.accueil .details {
+    position: relative;
+}
+
+.accueil .details .right {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.accueil .details .right p {
+    padding-left: 5px;
+}
+
+.new_article{
+    width: 100%;
+    background-color: #241332;
+}
+
+.new_article_prewrapper{
+    background-color: #4666E5;
+    border-bottom-left-radius: 75px;
+    
+    padding:15px 0;
+}
+
+.new_article .wrapper{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.new_article .wrapper .link_container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color: white;
+}
+.fa-plus-circle{
+    margin-right: 15px;
+}
+
+.stat_div{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color: white;
+}
+
+.stat_div .stat_element{
+    text-align: center;
+    margin-left: 25px;
+}
+
+.bg-blue{
+    background-color: #4666E5 ;
+}
+
+.block_voyage{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.block_voyage .last_post{
+    flex-basis: 25%;
+    height: 100%;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    background-color: #241332;
+}   
+
+.block_voyage .block_post{
+    height: 100%;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    flex-basis: 75%;
+    background-color: #ffffff;
+}
+.post_nav_item_header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.last_post .post_nav_item{
+    color:white;
+    
+}
+.last_post .post_nav_item .container{
+    padding:35px 0;
+    border-bottom: 1px solid white;
+}
+
+.last_post .post_nav_item .post_nav_item_header{
+    width: 90%;
+    margin: 0 auto;
+}
+.last_post .post_nav_item .post_nav_item_header_profile{
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    border: 2px solid white;
+}
+
+.last_post .post_nav_item .post_nav_item_body .post_nav_img{
+    width: 50%;
+    border-radius: 15px;
+} 
+
+.last_post .post_nav_item .post_nav_item_body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.block_post .container{
+    width:80%;
+    margin: 0 auto;
+}
+
+.block_post .container .post_header{
+    margin:25px 0;
+}
+
+.block_post .container .title{
+    font-size: 24pt;
+
+}
+
+.block_post .container  .paragraphe{
+    width:80%;
+    font-size: 20px;
+    line-height: 29px;
+    margin: 25px 0 ;
+}
+
+.block_post .post_img{
+    width:100%;
+    height:30vh;
+    object-fit: cover;
 }

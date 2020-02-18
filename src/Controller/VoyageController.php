@@ -8,26 +8,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController{
+class VoyageController extends AbstractController{
     /**
-     * @Route("/",name="home_index",methods={"GET"})
+     * @Route("/voyages",name="voyage_index",methods={"GET"})
      * 
      * @param Request $request
      * @return Response
      */
     public function index(Request $request,EntityManagerInterface $entityManager): Response
     {
-        return $this->render('Home/index.html.twig');
-    }
-
-    /**
-     * @Route("/accueil",name="home_actu",methods={"GET"})
-     * 
-     * @param Request $request
-     * @return Response
-     */
-    public function actu(Request $request,EntityManagerInterface $entityManager): Response
-    {
-        return $this->render('Home/accueil.html.twig');
+        return $this->render('Voyage/index.html.twig');
     }
 }
