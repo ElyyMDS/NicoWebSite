@@ -420,3 +420,43 @@ box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
     align-items: center;
     justify-content: center;
 }
+
+.block_new {
+    text-align: center;
+    color: white;
+}
+
+.block_new .form_article {
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    justify-content: center;
+    height: 60%;
+    width: 60%;
+    align-items: center;
+}
+.block_new .form_article label {
+    text-align: left;
+}
+
+.block_new .form_article input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+    width: 50%;
+
+}
+
+.button.purple {
+    background-color: #8A56AC !important;
+    margin: 0 auto;
+    width: 30%;
+}
+.button.purple a {
+    color: white;
+}
+
+.text_help {
+    padding-top: 2rem;
+}

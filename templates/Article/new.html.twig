@@ -7,14 +7,19 @@
             <div id="mg">
             </div>
             <div class="block_new purple">
-                <form method="POST" action="/new-article-content" class="form-article">
-                    <input type="text" name="title"/>
-                    <input type="date" name="date_debut"/>
-                    <input type="date" name="date_fin"/>
-                    <button type="submit" class="button-create">CREER LE VOYAGE</button>
-                </form>
+                <form method="POST" action="/new-article-content" class="form_article">
+                    <label for="title">Titre du voyage</label>
+                    <input type="text" placeholder="Titre" name="title"/>
 
-                <p class="text-help">
+                    <label for="date_debut">Date de début</label>
+                    <input type="date" name="date_debut"/>
+
+                    <label for="date_fin">Date de fin</label>
+                    <input type="date" name="date_fin"/>
+                </form>
+                <p type="submit" class="button purple"><a href="">CREER LE VOYAGE</a></p>
+
+                <p class="text_help">
                 Vous allez créer une annonce interactive, 3 icônes vont être à votre disposition,<br>
                 une pour créer un titre (  <i class="fas fa-heading"></i>  ), une pour créer un paragraphe (  <i class="fas fa-paragraph"></i>  )<br>
                 et une dernière icône pour ajouter une photo (  <i class="far fa-image"></i>   )
