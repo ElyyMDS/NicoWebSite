@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+        <main class="block_main voyage">
+            <div id="mg">
+            </div>
+
+            <div class="new_article">
+                <div class="new_article_prewrapper">
+                    <div class="wrapper">
+                        <a href="/new-article" class="link_container">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>Ajouter un article</p>
+                        </a>
+                        <div class="stat_div">
+                            <div class="stat_element">
+                                <p>125<p>
+                                <p>J'AIMES</p>
+                            </div>
+                            <div class="stat_element">
+                                <p>12<p>
+                                <p>COMMENTAIRES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block_voyage">
+                <div class="last_post">
+                </div>
+                <div class="block_post">
+                    
+                </div>
+            </div>
+        </main>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    let headerContent = document.getElementsByClassName('user_info');
+    header ? header.classList.remove('purple-shadow') : false;
+    headerContent[0].innerHTML = "<h2>Mes Voyages</h2><p class='text-lighter'>Découvrez mon parcours</p>";
+    mg ? mg.setAttribute('style',`height: ${header.offsetHeight}px`): false;
+    let headerBg = document.getElementsByClassName('header_precontainer')[0];
+    let newArticleDiv = document.getElementsByClassName('new_article')[0];
+    header.setAttribute('style','background-color: #4666E5');
+    let voyage = document.getElementsByClassName('block_voyage')[0];
+    voyage ? voyage.setAttribute('style',`height: ${window.innerHeight - header.offsetHeight - newArticleDiv.offsetHeight}px`): false;
+</script>
+{% endblock %}
+
+

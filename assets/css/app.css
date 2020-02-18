@@ -5,6 +5,9 @@ body {
     margin:0;
     font-family: "Montserrat";
 }
+ul{
+    margin:0;
+}
 p{
     margin:0;
 }
@@ -28,6 +31,9 @@ h2{
 
 .block_main{
     height: 100vh;
+}
+#mg{
+    transition: all .3s;
 }
 
 #mg {
@@ -103,15 +109,20 @@ box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
 .block_main.accueil{
     background-image: url("/assets/bg_profile.jpg");
 }
-
-.block_header{
-    background-color: white;
-    border-bottom-left-radius: 75px;
+.purple-shadow{
     -webkit-box-shadow: 10px 10px 35px 64px rgba(61,30,80,1);
     -moz-box-shadow: 10px 10px 35px 64px rgba(61,30,80,1);
     box-shadow: 10px 10px 35px 64px rgba(61,30,80,1);
     position: fixed;
     width: 100%;
+}
+.block_header{
+    position: fixed;
+    width:100%;
+}
+.block_header .header_precontainer{
+    background-color: white;
+    border-bottom-left-radius: 75px;
 }
 
 .block_header .header_container{
@@ -223,4 +234,72 @@ box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
 }
 .accueil .details .right p {
     padding-left: 5px;
+}
+
+.new_article{
+    width: 100%;
+    background-color: #241332;
+}
+
+.new_article_prewrapper{
+    background-color: #4666E5;
+    border-bottom-left-radius: 75px;
+    
+    padding:15px 0;
+}
+
+.new_article .wrapper{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.new_article .wrapper .link_container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color: white;
+}
+.fa-plus-circle{
+    margin-right: 15px;
+}
+
+.stat_div{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color: white;
+}
+
+.stat_div .stat_element{
+    text-align: center;
+    margin-left: 25px;
+}
+
+.bg-blue{
+    background-color: #4666E5 ;
+}
+
+.block_voyage{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.block_voyage .last_post{
+    flex-basis: 30%;
+    height: 100%;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    background-color: #241332;
+}
+
+.block_voyage .block_post{
+    height: 100%;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    flex-basis: 70%;
+    background-color: #ffffff;
 }
