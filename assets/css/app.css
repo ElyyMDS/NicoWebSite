@@ -374,10 +374,9 @@ box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
 
 }
 
-.block_post .container  .paragraphe{
+.block_post .container .paragraphe{
     width:80%;
-    font-size: 20px;
-    line-height: 29px;
+    font-size: 14px;
     margin: 25px 0 ;
 }
 
