@@ -1,9 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Nico Symfony Projet{% endblock %}
-
-{% block body %}
-        <main class="block_main accueil">
+{% block header %}
             <header class="block_header">
             
                 <div class="header_container">
@@ -35,8 +33,13 @@
                         </li>
                     </ul>
                 </nav>
-
             </header>
+            {% endblock %}
+{% block body %}
+        <main class="block_main accueil">
+            
+
+
             <div>
             </div>
         </main>
