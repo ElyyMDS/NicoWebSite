@@ -17,6 +17,10 @@ class VoyageController extends AbstractController{
      */
     public function index(Request $request,EntityManagerInterface $entityManager): Response
     {
+        $article = json_encode(["title"=>'toto',"content"=>[json_encode(["type"=>"paragraphe","id"=>5]),json_encode(["type"=>"paragraphe","id"=>5])]]);
+        dump($article);
+        dump(json_decode($article));
+        exit();
         return $this->render('Voyage/index.html.twig');
     }
 }
