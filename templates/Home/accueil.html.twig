@@ -6,7 +6,7 @@
             
                 <div class="header_container">
 
-                    <a class="link_back"><i class="fas fa-chevron-left"></i></a>
+                    <a href="/" link_back"><i class="fas fa-chevron-left"></i></a>
 
                     <div class="user_info">
                         <img class="profile_picture" src="assets/avatar.png"/>
@@ -20,7 +20,7 @@
                 <nav class="block_nav">
                     <ul class="nav_menu">
                         <li>
-                            <a class="nav_item" href="#"><i class="fas fa-home nav_icon"></i><p class="nav_title">Home</p></a>
+                            <a class="nav_item active" href="#"><i class="fas fa-home nav_icon"></i><p class="nav_title">Home</p></a>
                         </li>
                         <li>
                             <a class="nav_item" href="#"><i class="far fa-calendar nav_icon"></i><p class="nav_title">Mes voyages</p></a>
@@ -37,14 +37,41 @@
             {% endblock %}
 {% block body %}
         <main class="block_main accueil">
-            
+            {# Ne pas toucher la div mg #}
+            <div id="mg">
+            </div>
 
-
-            <div>
+            <div class="details">
+                <div class="block_bienvenue">
+                    <div class="landing_element">
+                        <span>Nicolas M.</span>
+                        <p>Bienvenue sur <br>ma page</p>
+                    </div>
+                    <a href="" class="mes_voyages">Mes voyages<i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="container">
+                    <div class="left">
+                        <p>Picture by Nicolas M.</p>
+                        <p style="font-family: 'Montserrat ExtraLight'">Chiemsee, Germany</p>
+                    </div>
+                    <div class="right">
+                        <p>29</p>
+                        <p><i class="far fa-comment-alt" style="padding-right: 10px"></i></p>
+                        <p>256</p>
+                        <p><i class="far fa-heart"></i></p>
+                    </div>
+                </div>
             </div>
         </main>
 {% endblock %}
 
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+<script>
+    let headerHeight = header.offsetHeight;
+    let detailHeight = window.innerHeight - headerHeight - 20;
+    let details = document.getElementsByClassName('container')[0];
+    details.setAttribute('style',`height: ${detailHeight}px`);
+</script>
+{% endblock %}
 
 

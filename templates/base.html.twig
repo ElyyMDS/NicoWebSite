@@ -16,7 +16,12 @@
     {% block body %}
 
     {% endblock %}
-{% block javascripts %}{% endblock %}
+    <script>
+        let header = document.getElementsByClassName('block_header')[0];
+        let mg = document.getElementById('mg');
+        mg ? mg.setAttribute('style', `height: ${header.offsetHeight}px`): false;
+    </script>
+    {% block javascripts %}{% endblock %}
 </body>
 </html>
 
