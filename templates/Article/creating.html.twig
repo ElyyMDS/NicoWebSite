@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+        <main class="block_main voyage">
+            <div id="mg">
+            </div>
+
+            <div class="new_article">
+                <div class="new_article_prewrapper">
+                    <div class="wrapper">
+                        <a href="/new-article" class="link_container">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>Ajouter un article</p>
+                        </a>
+                        <div class="stat_div">
+                            <div class="stat_element">
+                                <p>125<p>
+                                <p>J'AIMES</p>
+                            </div>
+                            <div class="stat_element">
+                                <p>12<p>
+                                <p>COMMENTAIRES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="block_voyage">
+                <div class="last_post style-4">
+
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="post_nav_item" href="/voyages">
+                        <div class="container">
+                            <div class="post_nav_item_header">
+                                <img src="assets/Capturedd.png" class="post_nav_item_header_profile"/>
+                                <div class="post_nav_item_header_title">
+                                    <p>09 AVRIL | 12 AVRIL</p>
+                                    <p>Week-end à la baule</p>
+                                </div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="post_nav_item_body">
+                                <img src="assets/bg_profile.jpg" class="post_nav_img"/>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="block_post style-4">
+                    <div class="container">
+                        <div class="post_header">
+                            <p>{{ date_debut }} | {{ date_fin }}</p>
+                            <h2 class="title">{{title}}</h2>
+                        </div>
+                        <form class="form_creating" action="/new-article-handler">
+                            <input type="hidden" name="date_debut" value="{{date_debut}}" />
+                            <input type="hidden" name="date_fin" value="{{date_fin}}" />
+                            <div class="val-container">
+
+                            </div>
+                            <button class="submit-article">Publier</button>
+                        </form>
+
+                        <div class="button-container">
+                            <div class="button-article title">
+                                <i class="fas fa-heading"></i>
+                            </div>
+
+                            <div class="button-article para">
+                                <i class="fas fa-paragraph"></i>
+                            </div>
+
+                            <div class="button-article img">
+                                <i class="far fa-image"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    let headerContent = document.getElementsByClassName('user_info');
+    header ? header.classList.remove('purple-shadow') : false;
+    headerContent[0].innerHTML = "<h2>Ajout d'un voyage</h2>";
+    mg ? mg.setAttribute('style',`height: ${header.offsetHeight-5}px`): false;
+    let headerBg = document.getElementsByClassName('header_precontainer')[0];
+    let newArticleDiv = document.getElementsByClassName('new_article')[0];
+    header.setAttribute('style','background-color: #4666E5');
+    let form = document.getElementsByClassName('val-container')[0];
+    let voyage = document.getElementsByClassName('block_voyage')[0];
+    voyage ? voyage.setAttribute('style',`height: ${window.innerHeight - header.offsetHeight - newArticleDiv.offsetHeight}px`): false;
+    let index = 0;
+    
+
+    let buttons = document.getElementsByClassName('button-article');
+    var arr = [].slice.call(buttons);
+    console.log(arr);
+    let input;
+    arr.forEach(button => {
+        button.addEventListener('click',()=>{
+            switch(button.classList[1]){
+                case 'img':
+                    input = document.createElement('input');
+                    input.setAttribute('name',`img${index}`);
+                    input.setAttribute('type','file');
+                    form.appendChild(input);
+                    index++;
+                return
+                case 'para':
+                    input = document.createElement('textarea');
+                    input.setAttribute('name',`p${index}`);
+                    form.appendChild(input);
+                    index++;
+                return
+                case 'title':
+                    input = document.createElement('input');
+                    input.setAttribute('name',`t${index}`);
+                    input.setAttribute('type','text');
+                    form.appendChild(input);
+                    index++;
+                return
+                default:
+                return
+            }
+        })
+    })
+
+</script>
+{% endblock %}
+
+

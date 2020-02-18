@@ -37,6 +37,7 @@
     let headerHeight = header.offsetHeight;
     let detailHeight = window.innerHeight - headerHeight - 20;
     let details = document.getElementsByClassName('container')[0];
+    header ? header.classList.add('purple-shadow') : false;
     details.setAttribute('style',`height: ${detailHeight}px`);
 </script>
 {% endblock %}

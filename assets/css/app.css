@@ -385,3 +385,38 @@ box-shadow: 10px 10px 35px -17px rgba(0,0,0,0.75);
     height:30vh;
     object-fit: cover;
 }
+
+.purple{
+    background-color: #241332;
+}
+
+.button-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 50%;
+    margin: 80px auto;
+    justify-content: space-around;
+}
+
+.button-container .button-article{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-article:hover{
+    cursor: pointer;
+}
+
+ .val-container{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}

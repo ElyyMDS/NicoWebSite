@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+        <main class="block_main voyage">
+            <div id="mg">
+            </div>
+            <div class="block_new purple">
+                <form method="POST" action="/new-article-content" class="form-article">
+                    <input type="text" name="title"/>
+                    <input type="date" name="date_debut"/>
+                    <input type="date" name="date_fin"/>
+                    <button type="submit" class="button-create">CREER LE VOYAGE</button>
+                </form>
+
+                <p class="text-help">
+                Vous allez créer une annonce interactive, 3 icônes vont être à votre disposition,<br>
+                une pour créer un titre (  <i class="fas fa-heading"></i>  ), une pour créer un paragraphe (  <i class="fas fa-paragraph"></i>  )<br>
+                et une dernière icône pour ajouter une photo (  <i class="far fa-image"></i>   )
+                </p>
+            </div>
+        </main>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    let headerContent = document.getElementsByClassName('user_info');
+    let nav = document.getElementsByClassName('block_nav')[0];
+    let blockNew = document.getElementsByClassName('block_new')[0];
+    nav.remove();
+    headerContent[0].innerHTML = "<h2>Ajout d'un voyage</h2>";
+    header.classList.add('purple');
+    header ? header.childNodes[1].setAttribute('style',`height: 15vh`): false
+    mg ? mg.setAttribute('style',`height: ${header.offsetHeight}px`): false;
+    blockNew.setAttribute('style',`height: ${window.innerHeight - header.offsetHeight}px`);
+
+</script>
+{% endblock %}
+
+
