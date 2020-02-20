@@ -14,7 +14,7 @@
                         <span>Nicolas M.</span>
                         <p>Bienvenue sur <br>ma page</p>
                     </div>
-                    <a href="" class="mes_voyages">Mes voyages<i class="fas fa-arrow-right"></i></a>
+                    <a href="/voyages" class="mes_voyages">Mes voyages<i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="container">
                     <div class="left">
@@ -39,6 +39,11 @@
     let details = document.getElementsByClassName('container')[0];
     header ? header.classList.add('purple-shadow') : false;
     details.setAttribute('style',`height: ${detailHeight}px`);
+
+    let navHome = document.getElementById('home');
+    navHome.classList.add("active");
+
+
 </script>
 {% endblock %}
 

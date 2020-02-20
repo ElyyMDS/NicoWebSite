@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nico Symfony Projet{% endblock %}
+
+{% block body %}
+<main class="block_main voyage">
+    <div id="mg">
+    </div>
+
+    <div class="new_article">
+        <div class="new_article_prewrapper violet">
+            <div class="wrapper">
+                <div class="inner">
+                    <i class="fas fa-chevron-down"></i>
+                    <p>2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        let headerContent = document.getElementsByClassName('user_info');
+        header ? header.classList.remove('purple-shadow') : false;
+        headerContent[0].innerHTML = "<h2>Ma galerie</h2><p class='text-lighter'>Stocker ses photos</p>";
+
+        let headerBg = document.getElementsByClassName('header_precontainer')[0];
+        let newArticleDiv = document.getElementsByClassName('new_article')[0];
+        header.setAttribute('style','background-color: #352641');
+        let voyage = document.getElementsByClassName('block_voyage')[0];
+        voyage ? voyage.setAttribute('style',`height: ${window.innerHeight - header.offsetHeight - newArticleDiv.offsetHeight}px`): false;
+        let navGalerie = document.getElementById('galerie');
+        navGalerie.classList.add("active");
+        mg ? mg.setAttribute('style',`height: ${header.offsetHeight}px`): false;
+    </script>
+{% endblock %}
